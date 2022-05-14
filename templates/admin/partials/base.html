@@ -1,0 +1,355 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>:: Lucid HR BS5 :: Home</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Lucid HR & Project Admin Dashboard Template with Bootstrap 5x">
+    <meta name="author" content="WrapTheme, design by: ThemeMakker.com">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+
+<body>
+    <div id="layout" class="theme-orange">
+
+        <div class="page-loader-wrapper text-center">
+            <div class="loader">
+                <svg class="p-3 bg-light rounded" width="120px" viewBox="0 0 85 25">
+                    <path d="M12.3,7.2l1.5-3.7l8.1,19.4H19l-2.4-5.7H8.2l1.1-2.5h6.1L12.3,7.2z M14.8,20.2l1,2.7H0L9.5,0h3.1L4.3,20.2H14.8
+                z M29,18.5v-14h1.6v12.6h6.2v1.5H29V18.5z M49.6,4.5v9.1c0,1.6-0.5,2.9-1.5,3.8s-2.3,1.4-4,1.4s-3-0.5-3.9-1.4s-1.4-2.2-1.4-3.8V4.5
+                h1.6v9.1c0,1.2,0.3,2.1,1,2.7c0.6,0.6,1.6,0.9,2.8,0.9s2.1-0.3,2.7-0.9c0.6-0.6,1-1.5,1-2.7V4.5H49.6z M59.4,5.7
+                c-1.5,0-2.8,0.5-3.7,1.5s-1.3,2.4-1.3,4.2s0.4,3.3,1.3,4.3c0.9,1,2.1,1.5,3.7,1.5c1,0,2.1-0.2,3.4-0.5v1.4c-1,0.4-2.2,0.5-3.6,0.5
+                c-2.1,0-3.7-0.6-4.8-1.9s-1.7-3-1.7-5.4c0-1.4,0.3-2.7,0.8-3.8c0.5-0.9,1.3-1.8,2.3-2.4s2.2-0.9,3.6-0.9c1.5,0,2.8,0.3,3.9,0.8
+                l-0.7,1.4C61.5,6,60.4,5.7,59.4,5.7z M65.8,18.5v-14h1.6v14.1h-1.6V18.5z M82.5,11.3c0,2.3-0.6,4.1-1.9,5.3s-3.1,1.8-5.4,1.8h-3.9
+                V4.5h4.3c2.2,0,3.9,0.6,5.1,1.8S82.5,9.2,82.5,11.3z M80.8,11.4c0-1.8-0.5-3.2-1.4-4.1s-2.3-1.4-4.1-1.4h-2.4v11.2h2
+                c1.9,0,3.4-0.5,4.4-1.4S80.8,13.3,80.8,11.4z" />
+                </svg>
+                <div class="h5 fw-light mt-3">Please wait</div>
+            </div>
+        </div>
+
+        <div id="wrapper">
+            {% include 'admin/partials/header.html' %}
+            {% include 'admin/partials/sidebar.html' %}
+            {% block content %}
+    
+            {% endblock %}
+
+           
+            <!-- <div id="main-content">
+                <div class="container-fluid">
+                    <div class="block-header py-lg-4 py-3">
+                        <div class="row g-3">
+                            <div class="col-md-6 col-sm-12">
+                                <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                                        class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i
+                                            class="fa fa-arrow-left"></i></a> Dashboard</h2>
+                                <ul class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="index-2.html">Lucid</a></li>
+                                    <li class="breadcrumb-item active">Dashboard</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6 col-sm-12 text-md-end">
+                                <div class="d-inline-flex text-start">
+                                    <div class="me-2">
+                                        <h6 class="mb-0"><i class="fa fa-user"></i> 1,784</h6>
+                                        <small>Visitors</small>
+                                    </div>
+                                    <span id="bh_visitors"></span>
+                                </div>
+                                <div class="d-inline-flex text-start ms-lg-3 me-lg-3 ms-1 me-1">
+                                    <div class="me-2">
+                                        <h6 class="mb-0"><i class="fa fa-globe"></i> 325</h6>
+                                        <small>Visits</small>
+                                    </div>
+                                    <span id="bh_visits"></span>
+                                </div>
+                                <div class="d-inline-flex text-start">
+                                    <div class="me-2">
+                                        <h6 class="mb-0"><i class="fa fa-comments"></i> 13</h6>
+                                        <small>Chats</small>
+                                    </div>
+                                    <span id="bh_chats"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row g-2 clearfix row-deck">
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="card top_counter">
+                                <div class="list-group list-group-custom list-group-flush">
+                                    <div class="list-group-item d-flex align-items-center py-3">
+                                        <div class="icon text-center me-3"><i class="fa fa-user"></i> </div>
+                                        <div class="content">
+                                            <div>New Employee</div>
+                                            <h5 class="mb-0">22</h5>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex align-items-center py-3">
+                                        <div class="icon text-center me-3"><i class="fa fa-users"></i> </div>
+                                        <div class="content">
+                                            <div>Total Employee</div>
+                                            <h5 class="mb-0">425</h5>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex align-items-center py-3">
+                                        <div class="icon text-center me-3"><i class="fa fa-university"></i> </div>
+                                        <div class="content">
+                                            <div>Total Salary</div>
+                                            <h5 class="mb-0">$2.8M</h5>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item d-flex align-items-center py-3">
+                                        <div class="icon text-center me-3"><i class="fa fa-university"></i> </div>
+                                        <div class="content">
+                                            <div>Avg. Salary</div>
+                                            <h5 class="mb-0">$1,250</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-6 col-md-6">
+                            <div class="card text-center">
+                                <div class="card-body">
+                                    <h5>Income Analysis</h5>
+                                    <span class="text-muted">8% High then last month</span>
+                                    <div id="sparkline-pie" class="mt-3 d-flex justify-content-center"></div>
+                                    <div class="stats-report">
+                                        <div class="stat-item d-inline-block px-2 mt-4">
+                                            <h5 class="mb-0 fw-normal fs-6">Design</h5>
+                                            <strong>84.60%</strong>
+                                        </div>
+                                        <div class="stat-item d-inline-block px-2 mt-4">
+                                            <h5 class="mb-0 fw-normal fs-6">Dev</h5>
+                                            <strong>15.40%</strong>
+                                        </div>
+                                        <div class="stat-item d-inline-block px-2 mt-4">
+                                            <h5 class="mb-0 fw-normal fs-6">SEO</h5>
+                                            <strong>5.10%</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header border-0">
+                                    <h6 class="card-title">Salary Statistics</h6>
+                                    <ul class="header-dropdown list-unstyled">
+                                        <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Weekly">W</a></li>
+                                        <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Monthly">M</a></li>
+                                        <li><a class="tab_btn active" href="javascript:void(0);"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Yearly">Y</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false"></a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Another
+                                                        Action</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Something
+                                                        else</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div id="Salary_Statistics"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="card-title">Total Salary by Unit</h6>
+                                    <ul class="header-dropdown list-unstyled">
+                                        <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Weekly">W</a></li>
+                                        <li><a class="tab_btn" href="javascript:void(0);" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Monthly">M</a></li>
+                                        <li><a class="tab_btn active" href="javascript:void(0);"
+                                                data-bs-toggle="tooltip" data-bs-placement="top" title="Yearly">Y</a>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                            </a>
+                                            <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Another
+                                                        Action</a></li>
+                                                <li><a class="dropdown-item" href="javascript:void(0);">Something
+                                                        else</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-body">
+                                    <div id="total_Salary" class="ct-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-12 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="card-title">ToDo List</h6>
+                                </div>
+                                <div class="card-body todo_list">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Makers">
+                                            <label class="form-check-label" for="Makers">
+                                                <strong>New Employee intro</strong>
+                                            </label>
+                                            <span class="text-muted d-flex small">SCHEDULED FOR 3:00 P.M. ON JUN
+                                                2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Makers1"
+                                                checked>
+                                            <label class="form-check-label" for="Makers1">
+                                                <strong>Send email to CEO</strong>
+                                            </label>
+                                            <span class="text-muted d-flex small">SCHEDULED FOR 4:30 P.M. ON JUN
+                                                2021</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Makers2">
+                                            <label class="form-check-label" for="Makers2">
+                                                <strong>New Joing Employee Welcome kit</strong>
+                                            </label>
+                                            <span class="text-muted d-flex small">
+                                                <small><a href="#">John Smith</a> Designer</small><br>
+                                            </span>
+                                            <span class="text-muted d-flex small">
+                                                <small><a href="#">Hossein Shams</a> Developer</small><br>
+                                            </span>
+                                            <span class="text-muted d-flex small">
+                                                <small><a href="#">Maryam Amiri</a> SEO</small><br>
+                                            </span>
+                                            <span class="text-muted d-flex small">
+                                                <small><a href="#">Mike Litorus</a> iOS Developer</small>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="Makers3">
+                                            <label class="form-check-label" for="Makers3">
+                                                <strong>Birthday Wish</strong>
+                                            </label>
+                                            <span class="text-muted d-flex small">SCHEDULED FOR 4:30 P.M. ON JUN
+                                                2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-8 col-lg-7 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="card-title">Employee Performance</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover align-middle">
+                                            <thead>
+                                                <tr>
+                                                    <th>Avatar</th>
+                                                    <th>Name</th>
+                                                    <th>Designation</th>
+                                                    <th>Performance</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><img src="{% static 'images/xs/avatar1.jpg' %}"
+                                                            class="avatar rounded-circle" alt=""></td>
+                                                    <td>Marshall Nichols</td>
+                                                    <td><span>UI UX Designer</span></td>
+                                                    <td><span class="badge bg-success">Good</span></td>
+                                                    <td><span id="sparkbar_uideveloper"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{% static 'images/xs/avatar2.jpg' %}"
+                                                            class="avatar rounded-circle" alt=""></td>
+                                                    <td>Susie Willis</td>
+                                                    <td><span>Designer</span></td>
+                                                    <td><span class="badge bg-warning">Average</span></td>
+                                                    <td><span id="sparkbar_designer1"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{% static 'images/xs/avatar3.jpg' %}"
+                                                            class="avatar rounded-circle" alt=""></td>
+                                                    <td>Francisco Vasquez</td>
+                                                    <td><span>Team Leader</span></td>
+                                                    <td><span class="badge bg-primary">Excellent</span></td>
+                                                    <td><span id="sparkbar_leader"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{% static 'images/xs/avatar4.jpg' %}"
+                                                            class="avatar rounded-circle" alt=""></td>
+                                                    <td>Erin Gonzales</td>
+                                                    <td><span>Android Developer</span></td>
+                                                    <td><span class="badge bg-danger">Weak</span></td>
+                                                    <td><span id="sparkbar_developer"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><img src="{% static 'images/xs/avatar5.jpg' %}"
+                                                            class="avatar rounded-circle" alt=""></td>
+                                                    <td>Ava Alexander</td>
+                                                    <td><span>UI UX Designer</span></td>
+                                                    <td><span class="badge bg-success">Good</span></td>
+                                                    <td><span id="sparkbar_designer"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 col-md-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6 class="card-title">Employee Structure</h6>
+                                </div>
+                                <div class="card-body text-center">
+                                    <div id="apex-TotalStudent"></div>
+                                    <div class="mb-3 mt-4">
+                                        <span class="text-muted small">Male</span>
+                                        <h4 class="mb-0">73%</h4>
+                                    </div>
+                                    <div>
+                                        <span class="text-muted small">Female</span>
+                                        <h4 class="mb-0">27%</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="{% static 'bundles/libscripts.bundle.js' %}"></script>
+
+    <script src="{% static 'bundles/mainscripts.bundle.js' %}"></script>
+    <script src="{% static 'js/pages/index.js' %}"></script>
+</body>
+
+</html>
