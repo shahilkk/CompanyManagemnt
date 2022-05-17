@@ -1,0 +1,75 @@
+{% load static %}
+
+
+
+
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <title>Kanakku - Bootstrap Admin HTML Template</title>
+
+    <link rel="stylesheet" href="{% static 'company/img/favicon.png' %}">
+    <link rel="stylesheet" href="{% static 'company//plugins/datatables/datatables.min.css' %}">
+   
+
+    <link rel="stylesheet" href="{% static 'company/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'company/plugins/fontawesome/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'company/plugins/fontawesome/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'company/css/style.css' %}">
+</head>
+
+<body class="nk-body bg-lighter npc-default has-sidebar no-touch nk-nio-theme">
+
+    <div class="main-wrapper">
+
+        
+        {% include 'company/partials/navbar.html' %}
+        {% include 'company/partials/sidebar.html' %}
+        
+        {% block content %}
+        {% endblock %}
+
+
+
+
+       
+
+    </div>
+
+
+
+
+    <script src="{% static 'company/js/jquery-3.6.0.min.js' %}"></script>
+
+    <script src="{% static 'company/js/bootstrap.bundle.min.js' %}"></script>
+
+    <script src="{% static 'company/js/feather.min.js' %}"></script>
+
+    <script src="{% static 'company/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+
+    <script src="{% static 'company/plugins/apexchart/apexcharts.min.js' %}"></script>
+
+    <script src="{% static 'company/js/script.js' %}"></script>
+    <script src="{% static 'company/plugins/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'company/plugins/datatables/datatables.min.js' %}"></script>
+   
+
+    <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+
+
+</body>
+
+
+
+
+
+
+</html>
