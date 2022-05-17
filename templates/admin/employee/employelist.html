@@ -1,0 +1,247 @@
+{% extends 'admin/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header py-lg-4 py-3">
+            <div class="row g-3">
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                            class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i
+                                class="fa fa-arrow-left"></i></a> Employee List</h2>
+                    <ul class="breadcrumb mb-0">
+                        <li><a href="{% url 'adminapp:index' %}">Dashboard / </a></li>
+                        <li>Employee / </li>
+                        <li class="breadcrumb-item active">Employee List</li>
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h6 class="card-title">Employee List</h6>
+                        <ul class="header-dropdown">
+                            <li>
+                                <button type="button" class="btn btn-sm btn-outline-secondary"
+                                    data-bs-toggle="modal" data-bs-target="#addEmployee">Add New</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <table id="employee_List" class="table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                
+                                    <th></th>
+                                    <th>Name</th>
+                                    <th>Employee ID</th>
+                                    <th>Phone</th>
+                                    <th>Join Date</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                 
+                                    <td>
+                                        <img src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                            class="rounded-circle avatar" alt="">
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0">Marshall Nichols</h6>
+                                        <span><a href="https://wrraptheme.com/cdn-cgi/l/email-protection"
+                                                class="__cf_email__"
+                                                data-cfemail="107d71626378717c7c3d7e50777d71797c3e737f7d">[email&#160;protected]</a></span>
+                                    </td>
+                                    <td><span>LA-0215</span></td>
+                                    <td><span>+ 264-625-2583</span></td>
+                                    <td>24 Jun, 2015</td>
+                                    <td>Web Designer</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            title="Edit"><i class="fa fa-edit"></i></button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-danger js-sweetalert"
+                                            title="Delete" data-type="confirm"><i
+                                                class="fa fa-trash-o"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>
+                                        <img src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                            class="rounded-circle avatar" alt="">
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0">Susie Willis</h6>
+                                        <span><a href="https://wrraptheme.com/cdn-cgi/l/email-protection"
+                                                class="__cf_email__"
+                                                data-cfemail="7a090f0909131f570d3a1d171b131654191517">[email&#160;protected]</a></span>
+                                    </td>
+                                    <td><span>LA-0216</span></td>
+                                    <td><span>+ 264-625-2583</span></td>
+                                    <td>28 Jun, 2015</td>
+                                    <td>Web Developer</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            title="Edit"><i class="fa fa-edit"></i></button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-danger js-sweetalert"
+                                            title="Delete" data-type="confirm"><i
+                                                class="fa fa-trash-o"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>
+                                        <img src="{% static 'admin/images/xs/avatar3.jpg' %}"
+                                            class="rounded-circle avatar" alt="">
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0">Debra Stewart</h6>
+                                        <span><a href="https://wrraptheme.com/cdn-cgi/l/email-protection"
+                                                class="__cf_email__"
+                                                data-cfemail="62060700100322050f030b0e4c010d0f">[email&#160;protected]</a></span>
+                                    </td>
+                                    <td><span>LA-0218</span></td>
+                                    <td><span>+ 264-625-2583</span></td>
+                                    <td>21 July, 2015</td>
+                                    <td>Web Developer</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            title="Edit"><i class="fa fa-edit"></i></button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-danger js-sweetalert"
+                                            title="Delete" data-type="confirm"><i
+                                                class="fa fa-trash-o"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>
+                                        <img src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                            class="rounded-circle avatar" alt="">
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0">Francisco Vasquez</h6>
+                                        <span><a href="https://wrraptheme.com/cdn-cgi/l/email-protection"
+                                                class="__cf_email__"
+                                                data-cfemail="0a6c786b64696379277c4a6d676b636624696567">[email&#160;protected]</a></span>
+                                    </td>
+                                    <td><span>LA-0222</span></td>
+                                    <td><span>+ 264-625-2583</span></td>
+                                    <td>18 Jan, 2016</td>
+                                    <td>Team Leader</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            title="Edit"><i class="fa fa-edit"></i></button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-danger js-sweetalert"
+                                            title="Delete" data-type="confirm"><i
+                                                class="fa fa-trash-o"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                   
+                                    <td>
+                                        <img src="{% static 'admin/images/xs/avatar3.jpg' %}"
+                                            class="rounded-circle avatar" alt="">
+                                    </td>
+                                    <td>
+                                        <h6 class="mb-0">Jane Hunt</h6>
+                                        <span><a href="https://wrraptheme.com/cdn-cgi/l/email-protection"
+                                                class="__cf_email__"
+                                                data-cfemail="177d7679723a7f62796357707a767e7b3974787a">[email&#160;protected]</a></span>
+                                    </td>
+                                    <td><span>LA-0232</span></td>
+                                    <td><span>+ 264-625-2583</span></td>
+                                    <td>08 Mar, 2016</td>
+                                    <td>Android Developer</td>
+                                    <td>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"
+                                            title="Edit"><i class="fa fa-edit"></i></button>
+                                        <button type="button"
+                                            class="btn btn-sm btn-outline-danger js-sweetalert"
+                                            title="Delete" data-type="confirm"><i
+                                                class="fa fa-trash-o"></i></button>
+                                    </td>
+                                </tr>
+                              
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal fade" id="addEmployee" tabindex="-1" aria-labelledby="addEmployee" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="defaultModalLabel">Add Contact</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row g-2">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" placeholder="Email ID">
+                    </div>
+                    <div class="col-12">
+                        <input type="number" class="form-control" placeholder="Phone Number">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Employee ID">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Join Date">
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="Role">
+                    </div>
+                    <div class="col-12">
+                        <input type="file" class="form-control-file" aria-describedby="fileHelp">
+                        <small id="fileHelp" class="form-text text-muted d-block">This is some placeholder
+                            block-level help text for the above input. It's a bit lighter and easily wraps to a
+                            new line.</small>
+                        <hr>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Facebook">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Twitter">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="Linkedin">
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" placeholder="instagram">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Add</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+</script>
+{% endblock %}

@@ -1,0 +1,79 @@
+{% extends 'admin/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header py-lg-4 py-3">
+            <div class="row g-3">
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                            class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i
+                                class="fa fa-arrow-left"></i></a> Add Branch</h2>
+                    <ul class="breadcrumb mb-0">
+                        <li class=""><a href="{% url 'adminapp:index' %}">Dashboard / </a></li>
+                        <li class="">Branch / </li>
+                        <li class="breadcrumb-item active"> Add</li>
+                    </ul>
+                </div>
+             
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <div class="row g-3">
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Company Name *">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Company id*">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Branch Name*">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Email ID *">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Username *">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Password">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Confirm Password">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Mobile No">
+                    </div>
+                    <div class="col-md-4 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Manager Name *">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <input type="text" class="form-control" placeholder="Address">
+                    </div>
+                    {% comment %} <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h6 class="card-title">Bra</h6>
+                                <small class="d-block">try to remove the image</small>
+                            </div>
+                            <div class="card-body">
+                                <input type="file" id="dropify-event"
+                                    data-default-file="{% static 'admin/images/auth_bg.jpg' %}" />
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                
+                </div>
+                <button type="button" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

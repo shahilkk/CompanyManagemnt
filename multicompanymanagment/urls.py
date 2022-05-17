@@ -22,7 +22,7 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('adminapp.urls')),
-    # path('branch/',include('branch.urls')),
+    path('branch/',include('branch.urls')),
     # path('company/',include('company.urls')),
 
 ]+static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)

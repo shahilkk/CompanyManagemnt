@@ -1,0 +1,285 @@
+{% extends 'admin/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header py-lg-4 py-3">
+            <div class="row g-3">
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                            class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
+                        Projects List</h2>
+                    <ul class="breadcrumb mb-0">
+                        <li class=""><a href="{% url 'adminapp:index' %}">Dashboard /</a></li>
+                        <li class="">Projects /</li>
+                        <li class="breadcrumb-item active">Projects List</li>
+                    </ul>
+                </div>
+              
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12 col-md-12">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <table id="project_list" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Deadline</th>
+                                    <th>Prograss</th>
+                                    <th>Lead</th>
+                                    <th>Team</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="project-title">
+                                        <h6 class="fs-6 mb-0">InfiniO 4.1</h6>
+                                        <small>Created 14 July, 2021</small>
+                                    </td>
+                                    <td>8 Aug, 2021</td>
+                                    <td>
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="48"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+                                            </div>
+                                        </div>
+                                        <small>Completion with: 48%</small>
+                                    </td>
+                                    <td><img class="avatar rounded" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Team Lead"
+                                            alt="Avatar"></td>
+                                    <td>
+                                        <ul class="list-unstyled team-info mb-0 d-flex">
+                                            <li><img src="{% static 'admin/images/xs/avatar1.jpg' %}" alt="avatar"
+                                                    alt="Avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" alt="avatar"
+                                                    alt="Avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar3.jpg' %}" alt="avatar"
+                                                    alt="Avatar"></li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="badge bg-success">Active</span></td>
+                                    <td class="project-actions">
+                                        <a href="project-detail.html" class="btn btn-sm btn-outline-secondary"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-success"><i
+                                                class="fa fa-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-title">
+                                        <h6 class="fs-6 mb-0">Many desktop publishing packages and web</h6>
+                                        <small>Created 18 July, 2021</small>
+                                    </td>
+                                    <td>18 Aug, 2021</td>
+                                    <td>
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="78"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 78%;">
+                                            </div>
+                                        </div>
+                                        <small>Completion with: 78%</small>
+                                    </td>
+                                    <td><img class="avatar rounded" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Team Lead"
+                                            alt="Avatar"></td>
+                                    <td>
+                                        <ul class="list-unstyled team-info mb-0 d-flex">
+                                            <li><img src="{% static 'admin/images/xs/avatar10.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar7.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar5.jpg' %}" alt="avatar"></li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="badge bg-success">Active</span></td>
+                                    <td class="project-actions">
+                                        <a href="project-detail.html" class="btn btn-sm btn-outline-secondary"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-success"><i
+                                                class="fa fa-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-title">
+                                        <h6 class="fs-6 mb-0">iNext - One Page Responsive Template</h6>
+                                        <small>Created 14 July, 2021</small>
+                                    </td>
+                                    <td>22 Aug, 2021</td>
+                                    <td>
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar l-slategray" role="progressbar" aria-valuenow="29"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 29%;"></div>
+                                        </div>
+                                        <small>Completion with: 29%</small>
+                                    </td>
+                                    <td><img class="avatar rounded" src="{% static 'admin/images/xs/avatar3.jpg' %}"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Team Lead"
+                                            alt="Avatar"></td>
+                                    <td>
+                                        <ul class="list-unstyled team-info mb-0 d-flex">
+                                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar3.jpg' %}" alt="avatar"></li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="badge bg-secondary">InActive</span></td>
+                                    <td class="project-actions">
+                                        <a href="project-detail.html" class="btn btn-sm btn-outline-secondary"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-success"><i
+                                                class="fa fa-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-title">
+                                        <h6 class="fs-6 mb-0">Massive Event - Conference and Event</h6>
+                                        <small>Created 18 July, 2021</small>
+                                    </td>
+                                    <td>25 Sept, 2021</td>
+                                    <td>
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar progress-bar-danger" role="progressbar"
+                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"
+                                                style="width: 100%;"></div>
+                                        </div>
+                                        <small>Completion with: 100%</small>
+                                    </td>
+                                    <td><img class="avatar rounded" src="{% static 'admin/images/xs/avatar3.jpg' %}"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Team Lead"
+                                            alt="Avatar"></td>
+                                    <td>
+                                        <ul class="list-unstyled team-info mb-0 d-flex">
+                                            <li><img src="{% static 'admin/images/xs/avatar10.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar7.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar5.jpg' %}" alt="avatar"></li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="badge bg-danger">Closed</span></td>
+                                    <td class="project-actions">
+                                        <a href="project-detail.html" class="btn btn-sm btn-outline-secondary"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-success"><i
+                                                class="fa fa-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-title">
+                                        <h6 class="fs-6 mb-0">Oakleaf Admin - Bootstrap html5 with SASS</h6>
+                                        <small>Created 18 July, 2021</small>
+                                    </td>
+                                    <td>29 Aug, 2021</td>
+                                    <td>
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="13"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 13%;">
+                                            </div>
+                                        </div>
+                                        <small>Completion with: 13%</small>
+                                    </td>
+                                    <td><img class="avatar rounded" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Team Lead"
+                                            alt="Avatar"></td>
+                                    <td>
+                                        <ul class="list-unstyled team-info mb-0 d-flex">
+                                            <li><img src="{% static 'admin/images/xs/avatar7.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar1.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar3.jpg' %}" alt="avatar"></li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="badge bg-success">Active</span></td>
+                                    <td class="project-actions">
+                                        <a href="project-detail.html" class="btn btn-sm btn-outline-secondary"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-success"><i
+                                                class="fa fa-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="project-title">
+                                        <h6 class="fs-6 mb-0">InfiniO 4.1</h6>
+                                        <small>Created 14 July, 2021</small>
+                                    </td>
+                                    <td>05 Sept, 2021</td>
+                                    <td>
+                                        <div class="progress" style="height: 5px;">
+                                            <div class="progress-bar" role="progressbar" aria-valuenow="48"
+                                                aria-valuemin="0" aria-valuemax="100" style="width: 48%;">
+                                            </div>
+                                        </div>
+                                        <small>Completion with: 48%</small>
+                                    </td>
+                                    <td><img class="avatar rounded" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                            data-bs-toggle="tooltip" data-bs-placement="left" title="Team Lead"
+                                            alt="Avatar"></td>
+                                    <td>
+                                        <ul class="list-unstyled team-info mb-0 d-flex">
+                                            <li><img src="{% static 'admin/images/xs/avatar1.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" alt="avatar"></li>
+                                            <li><img src="{% static 'admin/images/xs/avatar3.jpg' %}" alt="avatar"></li>
+                                        </ul>
+                                    </td>
+                                    <td><span class="badge bg-success">Active</span></td>
+                                    <td class="project-actions">
+                                        <a href="project-detail.html" class="btn btn-sm btn-outline-secondary"><i
+                                                class="fa fa-eye"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-success"><i
+                                                class="fa fa-pencil"></i></a>
+                                        <a href="javascript:void(0);" class="btn btn-sm btn-outline-danger"><i
+                                                class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block JS %}
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+
+<script>
+
+    $(document).ready(function () {
+    var extensions = {
+        "sFilter": "dataTables_filter custom_filter_class"
+    }
+    $.extend($.fn.dataTableExt.oStdClasses, extensions);
+    $('#project_list').dataTable({
+        responsive: true,
+        pageLength: 10,
+        lengthMenu: [[5, 10, 20, -1], [5, 10, 20, 100]]
+    });
+
+    // Tooltip
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+});
+
+</script>
+
+{% endblock %}

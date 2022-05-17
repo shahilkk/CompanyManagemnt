@@ -5,8 +5,7 @@
             <img src="{% static 'images/user.png' %}" class="avatar lg rounded me-3" alt="User Profile Picture">
             <div class="dropdown flex-grow-1">
                 <span class="d-block">Welcome,</span>
-                <a href="#" class="dropdown-toggle user-name" data-bs-toggle="dropdown"><strong>Jessica
-                        Doe</strong></a>
+                <a href="#" class="dropdown-toggle user-name" data-bs-toggle="dropdown"><strong>Admin</strong></a>
                 <ul class="dropdown-menu p-2 shadow-sm">
                     <li><a href="page-profile2.html"><i class="fa fa-user me-2"></i>My Profile</a></li>
                     <li><a href="app-inbox.html"><i class="fa fa-envelope-open me-2"></i>Messages</a></li>
@@ -19,126 +18,96 @@
         <div class="row g-3">
             <div class="col">
                 <h6 class="mb-0">5+</h6>
-                <small class="text-muted">Experience</small>
+                <small class="text-muted">Project</small>
             </div>
             <div class="col">
                 <h6 class="mb-0">400+</h6>
-                <small class="text-muted">Employees</small>
+                <small class="text-muted">Branches</small>
             </div>
             <div class="col">
                 <h6 class="mb-0">80+</h6>
-                <small class="text-muted">Clients</small>
+                <small class="text-muted">Employees</small>
             </div>
         </div>
     </div>
 
     <ul class="nav nav-tabs text-center mb-2" role="tablist">
         <li class="nav-item flex-fill"><a class="nav-link active" data-bs-toggle="tab" href="#hr_menu"
-                role="tab">HR</a></li>
-        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#project_menu"
-                role="tab">Project</a></li>
-        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#sub_menu"
-                role="tab"><i class="fa fa-th-large"></i></a></li>
-        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#setting_menu"
-                role="tab"><i class="fa fa-cog"></i></a></li>
+                role="tab">Project</a>
+        </li>
+        <!-- <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#project_menu"
+                role="tab">Project</a></li> -->
+        <!-- <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#sub_menu"
+                role="tab"><i class="fa fa-th-large"></i></a></li> -->
+        <li class="nav-item flex-fill"><a class="nav-link" data-bs-toggle="tab" href="#setting_menu" role="tab"><i
+                    class="fa fa-cog"></i></a></li>
     </ul>
 
     <div class="tab-content px-0">
         <div class="tab-pane fade show active" id="hr_menu" role="tabpanel">
             <nav class="sidebar-nav">
                 <ul class="metismenu list-unstyled">
-                    <li class="active"><a href="index-2.html"><i class="fa fa-tachometer"></i><span>HR
+                    <li class="active"><a href="{% url 'adminapp:index' %}"><i class="fa fa-tachometer"></i><span>HR
                                 Dashboard</span></a></li>
-                    <li><a href="app-holidays.html"><i class="fa fa-list-ul"></i>Holidays</a></li>
-                    <li><a href="app-events.html"><i class="fa fa-calendar"></i>Events</a></li>
-                    <li><a href="app-activities.html"><i class="fa fa-file-text-o"></i>Activities</a></li>
-                    <li><a href="app-social.html"><i class="fa fa-globe"></i>HR Social</a></li>
+
                     <li>
-                        <a href="#Employees" class="has-arrow"><i
-                                class="fa fa-users"></i><span>Employees</span></a>
+                        <a href="#Projects" class="has-arrow"><i class="fa fa-list-ul"></i><span>Projects</span></a>
                         <ul class="list-unstyled">
-                            <li><a href="emp-all.html">All Employees</a></li>
+                            <li><a href="{% url 'adminapp:addproject' %}">Add Projects</a></li>
+                            <li><a href="{% url 'adminapp:listproject' %}">Projects List</a></li>
+                            <!-- <li><a href="project-grid.html">Projects Grid</a></li> -->
+                            <!-- <li><a href="project-detail.html">Projects Detail</a></li> -->
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#Clients" class="has-arrow"><i class="fa fa-building-o"></i><span>Branches</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href=" {% url 'adminapp:addbranch' %}">Add Branches</a></li>
+                            <li><a href="{% url 'adminapp:listbranch' %}">Branches List</a></li>
+                            <!-- <li><a href="{% url 'adminapp:viewbranch' %}">Branches Detail</a></li> -->
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'adminapp:employeelist' %}"><i class="fa fa-user"></i>Employees</a></li>
+                    <!-- <li>
+
+                        <a href="#Employees" class="has-arrow"><i class="fa fa-user"></i><span>Employees</span></a>
+                        <ul class="list-unstyled">
+                            <li><a href="{% url 'adminapp:employeelist' %}">All Employees</a></li>
                             <li><a href="emp-leave.html">Leave Requests</a></li>
                             <li><a href="emp-attendance.html">Attendance</a></li>
                             <li><a href="emp-departments.html">Departments</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#Accounts" class="has-arrow"><i
-                                class="fa fa-briefcase"></i><span>Accounts</span></a>
+                    </li> -->
+                    <!-- <li>
+                        <a href="#Accounts" class="has-arrow"><i class="fa fa-briefcase"></i><span>Accounts</span></a>
                         <ul class="list-unstyled">
                             <li><a href="acc-payments.html">Payments</a></li>
                             <li><a href="acc-expenses.html">Expenses</a></li>
                             <li><a href="acc-invoices.html">Invoices</a></li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#Payroll" class="has-arrow"><i
-                                class="fa fa-credit-card"></i><span>Payroll</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="payroll-payslip.html">Payslip</a></li>
-                            <li><a href="payroll-salary.html">Employee Salary</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#Report" class="has-arrow"><i
-                                class="fa fa-bar-chart"></i><span>Report</span></a>
+                    </li> -->
+                  
+                    <!-- <li>
+                        <a href="#Report" class="has-arrow"><i class="fa fa-bar-chart"></i><span>Report</span></a>
                         <ul class="list-unstyled">
                             <li><a href="report-expense.html">Expense Report</a></li>
                             <li><a href="report-invoice.html">Invoice Report</a></li>
                         </ul>
-                    </li>
-                    <li><a href="app-users.html"><i class="fa fa-user"></i>Users</a></li>
-                    <li>
-                        <a href="#Authentication" class="has-arrow"><i
-                                class="fa fa-lock"></i><span>Authentication</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="page-login.html">Login</a></li>
-                            <li><a href="page-register.html">Register</a></li>
-                            <li><a href="page-lockscreen.html">Lockscreen</a></li>
-                            <li><a href="page-forgot-password.html">Forgot Password</a></li>
-                            <li><a href="page-404.html">Page 404</a></li>
-                            <li><a href="page-403.html">Page 403</a></li>
-                            <li><a href="page-500.html">Page 500</a></li>
-                            <li><a href="page-503.html">Page 503</a></li>
-                        </ul>
-                    </li>
+                    </li> -->
+
+
+
+                  
+                    <li><a href="{% url 'adminapp:team' %}"><i class="fa fa-users"></i>Team</a></li>
+
+                    <!-- <li><a href="app-users.html"><i class="fa fa-user"></i>Worker</a></li> -->
+
+
                 </ul>
             </nav>
         </div>
-        <div class="tab-pane fade" id="project_menu" role="tabpanel">
-            <nav class="sidebar-nav">
-                <ul class="metismenu list-unstyled">
-                    <li><a href="index2.html"><i class="fa fa-tachometer"></i><span>Dashboard</span></a>
-                    </li>
-                    <li><a href="app-inbox.html"><i class="fa fa-envelope-o"></i>Inbox App</a></li>
-                    <li><a href="app-chat.html"><i class="fa fa-comments"></i>Chat App</a></li>
-                    <li>
-                        <a href="#Projects" class="has-arrow"><i
-                                class="fa fa-list-ul"></i><span>Projects</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="project-add.html">Add Projects</a></li>
-                            <li><a href="project-list.html">Projects List</a></li>
-                            <li><a href="project-grid.html">Projects Grid</a></li>
-                            <li><a href="project-detail.html">Projects Detail</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#Clients" class="has-arrow"><i
-                                class="fa fa-user"></i><span>Clients</span></a>
-                        <ul class="list-unstyled">
-                            <li><a href="client-add.html">Add Clients</a></li>
-                            <li><a href="client-list.html">Clients List</a></li>
-                            <li><a href="client-detail.html">Clients Detail</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="project-team.html"><i class="fa fa-users"></i>Team</a></li>
-                    <li><a href="app-taskboard.html"><i class="fa fa-tag"></i>Taskboard</a></li>
-                    <li><a href="app-tickets.html"><i class="fa fa-ticket"></i>Tickets</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="tab-pane fade" id="sub_menu" role="tabpanel">
+
+        <!-- <div class="tab-pane fade" id="sub_menu" role="tabpanel">
             <nav class="sidebar-nav">
                 <ul class="metismenu list-unstyled">
                     <li>
@@ -161,8 +130,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#Widgets" class="has-arrow"><i
-                                class="fa fa-puzzle-piece"></i><span>Widgets</span></a>
+                        <a href="#Widgets" class="has-arrow"><i class="fa fa-puzzle-piece"></i><span>Widgets</span></a>
                         <ul class="list-unstyled">
                             <li><a href="widgets-statistics.html">Statistics Widgets</a></li>
                             <li><a href="widgets-data.html">Data Widgets</a></li>
@@ -214,8 +182,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#forms" class="has-arrow"><i
-                                class="fa fa-pencil"></i><span>Forms</span></a>
+                        <a href="#forms" class="has-arrow"><i class="fa fa-pencil"></i><span>Forms</span></a>
                         <ul class="list-unstyled">
                             <li><a href="forms-validation.html">Form Validation</a></li>
                             <li><a href="forms-advanced.html">Advanced Elements</a></li>
@@ -242,8 +209,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#charts" class="has-arrow"><i
-                                class="fa fa-bar-chart"></i><span>Charts</span></a>
+                        <a href="#charts" class="has-arrow"><i class="fa fa-bar-chart"></i><span>Charts</span></a>
                         <ul class="list-unstyled">
                             <li><a href="chart-morris.html">Morris</a></li>
                             <li><a href="chart-flot.html">Flot</a></li>
@@ -263,7 +229,7 @@
                     </li>
                 </ul>
             </nav>
-        </div>
+        </div> -->
         <div class="tab-pane fade" id="setting_menu" role="tabpanel">
             <div class="px-3">
                 <h6>Choose Skin</h6>
@@ -311,7 +277,7 @@
                     </li>
                 </ul>
                 <hr>
-                <h6>General Settings</h6>
+                <!-- <h6>General Settings</h6>
                 <ul class="setting-list list-unstyled">
                     <li>
                         <div class="form-check">
@@ -351,7 +317,7 @@
                                 Permission</label>
                         </div>
                     </li>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </div>

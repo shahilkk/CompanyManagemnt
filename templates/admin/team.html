@@ -1,0 +1,292 @@
+{% extends 'admin/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header py-lg-4 py-3">
+            <div class="row g-3">
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                            class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i
+                                class="fa fa-arrow-left"></i></a> Team</h2>
+                    <ul class="breadcrumb mb-0">
+                        <li class=" "><a href="index-2.html">Dashboard / </a></li>
+                        <li class="breadcrumb-item active">Team</li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-lg-12 col-md-12">
+                <form>
+                    <label class="sr-only">Search</label>
+                    <input type="text" class="form-control" placeholder="Search...">
+                </form>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Web Designing Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar1.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Marshall Nichols</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Web Development Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar2.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Susie Willis</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">eCommerce Development Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar3.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Debra Stewart</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Sales Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar4.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Erin Gonzales</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Web Designing Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar5.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Marshall Nichols</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Web Development Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar6.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Susie Willis</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">eCommerce Development Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar3.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Debra Stewart</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Sales Team</h6>
+                        <div class="team-lead mt-4">
+                            <img class="rounded-circle img-thumbnail mx-auto d-block mb-2"
+                                src="{% static 'admin/images/sm/avatar2.jpg' %}" alt="">
+                            <h6 class="text-primary mb-2">Erin Gonzales</h6>
+                            <p>Team Lead</p>
+                            <span class="badge bg-secondary">Photoshop</span>
+                            <span class="badge bg-secondary">HTML/CSS</span>
+                            <span class="badge bg-secondary">Javascript</span>
+                        </div>
+                        <ul class="d-flex justify-content-center list-unstyled team-info mb-0 mt-3">
+                            <li class="me-3">Employees:</li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar4.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar5.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar2.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                            <li><img class="avatar sm rounded-circle" src="{% static 'admin/images/xs/avatar1.jpg' %}"
+                                    data-toggle="tooltip" data-placement="top" title="Avatar" alt="Avatar">
+                            </li>
+                        </ul>
+                        <p class="pt-3 mb-0 fs-6"><small>1 Lead, 3 Employees</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

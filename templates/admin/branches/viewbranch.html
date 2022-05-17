@@ -1,0 +1,192 @@
+{% extends 'admin/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header py-lg-4 py-3">
+            <div class="row g-3">
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                            class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
+                        Client Detail</h2>
+                    <ul class="breadcrumb mb-0">
+                        <li class="">Dashboard / </li>
+                        <li class=""><a href="index-2.html">Branch /</a></li>
+                        <li class="breadcrumb-item active">branch Detail</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="row g-2">
+            <div class="col-lg-12 col-md-12">
+                <div class="card client-detail">
+                    <div class="card-body">
+                        <div class="d-flex">
+                            <div class="profile-image">
+                                <img src="{% static 'admin/images/user.png' %} " alt="">
+                            </div>
+                            <div class="details ms-3">
+                                <h4 class="h5 text-primary"><strong>Jessica</strong> Doe <span
+                                        class="h6 text-secondary">CEO</span></h4>
+                                <p>795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                                <p class="social-icon">
+                                    <a title="Twitter" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                    <a title="Facebook" href="javascript:void(0);"><i class="fa fa-facebook"></i></a>
+                                    <a title="Google-plus" href="javascript:void(0);"><i class="fa fa-twitter"></i></a>
+                                    <a title="Behance" href="javascript:void(0);"><i class="fa fa-behance"></i></a>
+                                    <a title="Instagram" href="javascript:void(0);"><i class="fa fa-instagram "></i></a>
+                                </p>
+                                <div class="mt-3">
+                                    <button class="btn btn-sm btn-primary">Follow</button>
+                                    <button class="btn btn-sm btn-success">Message</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="card-title">DS - Design Team</h6>
+                        <small>Ranking 2th</small>
+                        <ul class="header-dropdown">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                                    aria-expanded="false"></a>
+                                <ul class="dropdown-menu dropstart list-unstyled">
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Another
+                                            Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Something
+                                            else</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-3">Info about Design Team <span class="badge bg-success float-end">New</span></h6>
+                        <p>It is a long established fact that a reader will be distracted by the readable
+                            content of a page when looking at its layout.</p>
+                        <ul class="list-unstyled team-info mt-3 d-flex align-items-center">
+                            <li class="me-3"><small class="text-muted">Team</small></li>
+                            <li><img src="{% static 'admin/images/xs/avatar1.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar3.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar4.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar5.jpg' %}" title="Avatar" alt="Avatar"></li>
+                        </ul>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar bg-primary" style="width: 87%" aria-valuenow="87" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <small>PROJECTS: 12</small>
+                                <h6>BUDGET: 4,870 USD</h6>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h6 class="card-title">MT - Marketing Team</h6>
+                        <small>Ranking 4th</small>
+                        <ul class="header-dropdown">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                                    aria-expanded="false"></a>
+                                <ul class="dropdown-menu dropdown-menu-end dropstart list-unstyled">
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Another
+                                            Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Something
+                                            else</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-3">Info about Marketing Team</h6>
+                        <p>It is a long established fact that a reader will be distracted by the readable
+                            content of a page when looking at its layout.</p>
+                        <ul class="list-unstyled team-info mt-3 d-flex align-items-center">
+                            <li class="me-3"><small class="text-muted">Team</small></li>
+                            <li><img src="{% static 'admin/images/xs/avatar10.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar9.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar8.jpg' %}" title="Avatar" alt="Avatar"></li>
+                        </ul>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar bg-success" style="width: 34%" aria-valuenow="34" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <small>PROJECTS: 08</small>
+                                <h6>BUDGET: 2,170 USD</h6>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="card">
+                    <div class="card-header bg-transparent">
+                        <h6 class="card-title">DT - Developers Team</h6>
+                        <small>Ranking 5th</small>
+                        <ul class="header-dropdown">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" role="button"
+                                    aria-expanded="false"></a>
+                                <ul class="dropdown-menu dropstart list-unstyled">
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Another
+                                            Action</a></li>
+                                    <li><a class="dropdown-item" href="javascript:void(0);">Something
+                                            else</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mb-3">Info about Developers Team</h6>
+                        <p>It is a long established fact that a reader will be distracted by the readable
+                            content of a page when looking at its layout.</p>
+                        <ul class="list-unstyled team-info mt-3 d-flex align-items-center">
+                            <li class="me-3"><small class="text-muted">Team</small></li>
+                            <li><img src="{% static 'admin/images/xs/avatar1.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar2.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar3.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar4.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar5.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar6.jpg' %}" title="Avatar" alt="Avatar"></li>
+                            <li><img src="{% static 'admin/images/xs/avatar7.jpg' %}" title="Avatar" alt="Avatar"></li>
+                        </ul>
+                        <div class="progress mb-3" style="height: 5px;">
+                            <div class="progress-bar bg-warning" style="width: 54%" aria-valuenow="54" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <div>
+                                <small>PROJECTS: 23</small>
+                                <h6>BUDGET: 8,000 USD</h6>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

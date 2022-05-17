@@ -1,0 +1,124 @@
+{% extends 'admin/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div id="main-content">
+    <div class="container-fluid">
+        <div class="block-header py-lg-4 py-3">
+            <div class="row g-3">
+                <div class="col-md-6 col-sm-12">
+                    <h2 class="m-0 fs-5"><a href="javascript:void(0);"
+                            class="btn btn-sm btn-link ps-0 btn-toggle-fullwidth"><i class="fa fa-arrow-left"></i></a>
+                        Create New Project</h2>
+                    <ul class="breadcrumb mb-0">
+                        <li class=""><a href="{% url 'adminapp:index' %}">Dashboard / </a></li>
+                        <li class="">Projects /</li>
+                        <li class="breadcrumb-item active">Add Project </li>
+                    </ul>
+                </div>
+               
+            </div>
+        </div>
+        <div class="row clearfix">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row g-3 clearfix">
+                            <div class="col-sm-12">
+                                <input type="email" class="form-control" placeholder="Project Name *">
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>Select Client Name</option>
+                                    <option>Core Technolab Pvt.</option>
+                                    <option>vPro Infoweb LLC.</option>
+                                    <option>M2 Solution Pvt. Ltd.</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="datepicker">
+                                    <input type="text" data-provide="datepicker" data-date-autoclose="true"
+                                        class="form-control" placeholder="Start Date *">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <div class="datepicker">
+                                    <input type="text" data-provide="datepicker" data-date-autoclose="true"
+                                        class="form-control" placeholder="End Date *">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>Select Priority</option>
+                                    <option>High</option>
+                                    <option>Medium</option>
+                                    <option>Low</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <label class="form-label">Select Rate in Doller</label>
+                                <input type="number" class="form-control" placeholder="Rate *">
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <label class="form-label">Type</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>Select Type</option>
+                                    <option>Hourly</option>
+                                    <option>Fixed</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <label class="form-label">Select Team Lead</label>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option>Select</option>
+                                    <option>Marshall Nichols</option>
+                                    <option>Susie Willis</option>
+                                    <option>Hossein Shams</option>
+                                    <option>Fidel Tonn</option>
+                                    <option>Frank Camly</option>
+                                    <option>Debra Stewart</option>
+                                    <option>Tim Hank</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 col-sm-12">
+                                <label class="form-label">Selet Team</label>
+                                <select class="form-select select2" multiple data-placeholder="Select">
+                                    <option value="multiselect-all">Select All</option>
+                                    <option value="cheese">Cheese</option>
+                                    <option value="tomatoes">Tomatoes</option>
+                                    <option value="mozarella">Mozzarella</option>
+                                    <option value="mushrooms">Mushrooms</option>
+                                    <option value="pepperoni">Pepperoni</option>
+                                    <option value="onions">Onions</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h6 class="card-title">Image Uploading</h6>
+                                        <small class="d-block">try to remove the image</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <input type="file" id="dropify-event"
+                                            data-default-file="{% static 'admin/images/auth_bg.jpg' %}" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-primary">Create</button>
+                                <button type="submit" class="btn btn-outline-secondary">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
