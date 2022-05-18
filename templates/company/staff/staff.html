@@ -9,13 +9,14 @@
         <div class="page-header">
             <div class="row align-items-center">
                 <div class="col">
-                    <h3 class="page-title">Clients</h3>
+                    <h3 class="page-title">Staff</h3>
                     <ul class="breadcrumb">
-                        <li class=""><a href="/user/index">Dashboard /</a>
-                        </li>
-                        <li class="breadcrumb-item active">Clients</li>
+                        <li class=""><a href="{% url 'company:index' %}">Dashboard / </a></li>
+                        <li class=""><a href="{% url 'company:staff' %}">Staff/</li>
+                        <li class="breadcrumb-item active">Add Staff</li>
                     </ul>
                 </div>
+            </div>
                 <div class="col-auto">
                     <a href="{% url 'company:addstaff' %}" class="btn btn-primary me-1">
                         <i class="fas fa-plus"></i>Add staff

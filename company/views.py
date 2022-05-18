@@ -56,7 +56,7 @@ def addincome(request):
     return render(request,'company/income/addincome.html')  
 
 def bank(request):
-    return render(request,'company/income/bank.html') 
+    return render(request,'company/bank/bank.html') 
 
  
 
