@@ -19,4 +19,43 @@ urlpatterns = [
     path('employee', views.employee, name='employee'),
     path('addemployee', views.addemployee, name='addemployee'),
     path('editemployee', views.editemployee, name='editemployee'),
+
+
+    path('profitandloss', views.profitandloss, name='profitandloss'),
+
+
+
+    path('payment', views.payment, name='payment'),
+
+    path('expense', views.expense, name='expense'),
+    path('addexpense', views.addexpense, name='addexpense'),
+
+
+    path('income', views.income, name='income'),
+
+
+    path('preview', views.preview, name='preview'),
+
+    path('search', views.search, name='search'),
+
+
+    path('estimate', views.estimate, name='estimate'),
+    path('invoice', views.invoice, name='invoice'),
+    path('bill', views.bill, name='bill'),
+
+
+    path('staffrequest', views.staffrequest, name='staffrequest'),
+    path('stockrequest', views.stockrequest, name='stockrequest'),
+
+   
+    
+
+
+
+
+
+
+
+
+    
 ]

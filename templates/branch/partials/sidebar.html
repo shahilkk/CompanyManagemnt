@@ -19,53 +19,49 @@
                 </li>
                 
                 <li {% if is_estimate %} class="active" {% endif %}>
-                    <a href="/user/estimate"><i class="fa fa-file" data-bs-toggle="tooltip"
+                    <a href="{% url 'branch:estimate' %}"><i class="fa fa-file" data-bs-toggle="tooltip"
                             title="fa fa-file-text"></i><span>Estimates</span></a>
                 </li>
                 <li {% if is_invoice %} class="active" {% endif %}>
-                    <a href="/user/invoiceList"><i class="fa fa-clipboard" data-bs-toggle="tooltip"
+                    <a href="{% url 'branch:invoice' %}"><i class="fa fa-clipboard" data-bs-toggle="tooltip"
                             title="fa fa-clipboard"></i><span>Invoices </span></a>
                 </li>
 
               
 
                 <li {% if is_payment %} class="active" {% endif %}>
-                    <a href="/user/payment"><i class="fa fa-credit-card"></i> <span>Payments</span></a>
+                    <a href="{% url 'branch:payment' %}"><i class="fa fa-credit-card"></i> <span>Payments</span></a>
                 </li>
                 <li {% if is_expenses %} class="active" {% endif %}>
-                    <a href="/user/expenses"><i class="fas fa-chart-area"></i> <span>Expenses</span></a>
+                    <a href="{% url 'branch:expense' %}"><i class="fas fa-chart-area"></i> <span>Expenses</span></a>
                 </li>
-                <li {% if is_income %} class="active" {% elif is_addincome%} class="active" {% endif %}>
-                    <a href="">
+                <li {% if is_income %} class="active" class="active" {% endif %}>
+                    <a href="{% url 'branch:income' %}">
                         <i class="material-icons fa-md">monetization_on</i>
                         <span>Income</span>
                     </a>
                 </li>
-                <li {% if is_bank %} class="active" {% endif %}>
-                    {% comment %} <a href="/user/bank"><i class="fa fa-university"></i> <span> Add Bank</span></a>
-                </li> {% endcomment %}
+               
                 <li {% if is_profitandloss %} class="active" {% endif %}>
-                    <a href="/user/profitandloss"><i class="fas fa-sitemap"></i> <span> Profit And Loss
+                    <a href=" {% url 'branch:profitandloss' %}"><i class="fas fa-sitemap"></i> <span> Profit And Loss
                         </span></a>
                 </li>
-                {% comment %} <li {% if is_filter %} class="active" {% endif %}>
-                    <a href="/user/filter"><i class="fa fa-filter"></i> <span> Advace filter </span></a>
-                </li> {% endcomment %}
+              
                 <li {% if is_print %} class="active" {% endif %}>
-                    <a href="/user/printlist"><i class="fa fa-eye"></i> <span> Preview List </span></a>
+                    <a href="{% url 'branch:preview' %}"><i class="fa fa-eye"></i> <span> Preview List </span></a>
                 </li>
                 <li {% if is_searchmedicine %} class="active" {% endif %}>
-                    <a href="">
+                    <a href="{% url 'branch:search' %}">
                         <i class="fa fa-search"></i>
                         <span>Stock Search/Request </span>
                     </a>
                 </li>
-                <li {% if is_medicinerequested %} class="active" {% endif %}>
+                <!-- <li {% if is_medicinerequested %} class="active" {% endif %}>
                     <a href="">
                         <i class="fa fa-upload"></i>
                         <span>Requested History</span>
                     </a>
-                </li>
+                </li> -->
 
 
             </ul>
