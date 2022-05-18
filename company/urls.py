@@ -27,6 +27,8 @@ urlpatterns = [
 
     path('bank',views.bank,name='bank'),
    
-    path('request',views.request,name='request'),
+    path('stocktransfer',views.stocktransfer,name='stocktransfer'),
+    path('stafftransfer',views.stafftransfer,name='stafftransfer'),
+   
     
 ]

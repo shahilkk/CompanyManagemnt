@@ -1,0 +1,124 @@
+{% extends 'company/partials/master.html' %}
+{% block content %}
+{% load static %}
+
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+            {% comment %} {% if status == 1 %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    Successfully send request <strong>Staff</strong>
+                </div>
+            {% endif %} {% endcomment %}
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                       stock Transfer
+                    </h3>
+                    <ul class="breadcrumb">
+                        {% comment %} <li class="">
+                            <a href="{% url 'adminapp:adminhome' %}">Dashboard /</a>
+                        </li> {% endcomment %}
+                        <li class="breadcrumb-item active">
+                            Transfer
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    {% comment %} <a href="{% url 'company:transferhistory' %}" class="btn btn-primary me-1">
+                        Transfer History
+                    </a> {% endcomment %}
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            stock Transfer
+                        </h4>
+                        <form action="#" method="POST">
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+
+                                    <div class="form-group">
+                                        <label>From:</label>
+                                        <input type="text" class="form-control" name="from"  list="branchlist" id="fbranch" required>
+                                        <datalist id="branchlist">
+                                       
+                                            <option value="" ></option>    
+                                       
+                                        </datalist>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>To:</label>
+                                        <input type="text" class="form-control" name="to" id="tbranch" list="tbranchlist" required >
+                                        <datalist id="tbranchlist">
+                                           
+                                            <option value="" > </option>    
+                                           
+                                        {% comment %} {% for m in medicines  %}
+                                            <option value="{{m.branch_name}}" >{{m.branch_name}} </option>    
+                                        {% endfor %} {% endcomment %}
+                                        </datalist>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>From</label>
+                                        <!-- <div class="cal-icon"> -->
+                                            <input class="form-control " type="date" name="fdate" required>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>To</label>
+                                        <!-- <div class="cal-icon"> -->
+                                            <input class="form-control " type="date" name="tdate" required>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> stock Name:</label>
+                                        <select class="select cal-icon form-control" id="sname" name="sname" required>
+                                           
+                                                <option value=""></option>
+                                           
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label> stock ID:</label>
+                                       <input type="text" class="form-control" id="sid" readonly>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-end mt-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Transfer
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

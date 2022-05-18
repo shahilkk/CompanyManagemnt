@@ -6,12 +6,13 @@
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-                <!-- <li class="menu-title"><span>Main</span></li> -->
+                {% comment %} <li class="menu-title"><span>Main</span></li> {% endcomment %}
                 <li class="active">
-                    <a href="index.html"><i data-feather="home"></i> <span>Dashboard</span></a>
+                    <a href="{% url 'company:index' %}"><i data-feather="home"></i> <span>Dashboard</span></a>
                 </li>
+                
                 <li>
-                    <a href="{% url 'company:branch' %}"><i  class="fa fa-university"></i> <span>Branches</span></a>
+                    <a href="{% url 'company:branch' %}"><i  class="fa fa-building"></i> <span>Branches</span></a>
                 </li>
                 {% comment %} <li>
                     <a href="estimates.html"><i data-feather="file-text"></i> <span></span></a>
@@ -21,7 +22,7 @@
                    
                 </li>
                 <li >
-                    <a href="{% url 'company:invoice' %}"><i class="fa fa-users"></i> <span>  Invoices</span> </a>
+                    <a href="{% url 'company:invoice' %}"><i class="fa fa-th-list"></i> <span>  Invoices</span> </a>
                    
                 </li>
                  <!-- <li class="submenu">
@@ -40,22 +41,36 @@
                     <a href="{% url 'company:bank' %}"><i class="fa fa-suitcase" ></i> <span>Bank</span></a>
                 </li>
                 <li>
-                    <a href="{% url 'company:income' %}"><i class="bi bi-cash"></i> <span>income</span></a>
+                    <a href="{% url 'company:income' %}"><i class="fas fa-clone"></i> <span>income</span></a>
                 </li>
                
                 <li>
                     <a href="{% url 'company:expences' %}"><i class="fas fa-chart-area"></i> <span>Expenses</span></a>
                 </li>
-                <li>
-                    <a href="{% url 'company:request' %}"><i class="fa fa-filter"></i> <span>Requestes</span></a>
+               
+               
+                <li class="submenu">
+                    <a href="#"><i class="fas fa-share-alt"></i> <span> Tranfer</span> <span
+                            class="menu-arrow"></span></a>
+                    <ul>
+                        <li><a href="{% url 'company:stafftransfer' %}">staff transfer</a></li>
+                        <li><a href="{% url 'company:stocktransfer' %}">stock transfer</a></li>
+                        
+                    </ul> 
                 </li>
-                <li>
-                    <a href="settings.html"><i class="fa fa-refresh"></i> <span>Tranfer</span></a>
-                </li>
+                {% comment %} <li class="submenu">
+                    <a href="#"><i data-feather="grid"></i> <span> Requestes</span> <span
+                            class="menu-arrow"></span></a>
+                    <ul>
+                        <li><a href="{% url 'company:staffrequestes' %}">staff Requestes</a></li>
+                        <li><a href="{% url 'company:stockrequestes' %}">stock Requestes</a></li>
+                        
+                    </ul>
+                </li> {% endcomment %}
                                                  
-                <li>
+                {% comment %} <li>
                     <a href="settings.html"><i data-feather="settings"></i> <span>Settings</span></a>
-                </li>
+                </li> {% endcomment %}
                 <!-- <li class="submenu">
                     <a href="#"><i data-feather="grid"></i> <span> Application</span> <span
                             class="menu-arrow"></span></a>
