@@ -134,14 +134,14 @@ $(document).on('click', '#filter_search', function () {
 
 
 // datatable
-// if ($('.datatable').length > 0) {
-//     $('.datatable').DataTable({
-//         language: {
-//             search: '<i class="fas fa-search"></i>',
-//             searchPlaceholder: "Search"
-//         }
-//     });
-// }
+if ($('.datatable').length > 0) {
+    $('.datatable').DataTable({
+        language: {
+            search: '<i class="fas fa-search"></i>',
+            searchPlaceholder: "Search"
+        }
+    });
+}
 // end datatable
 
 
@@ -173,4 +173,33 @@ $(".add-table-items").on('click', '.remove-btn', function () {
     return false;
 
 });
-
+$(document).on("click",".add-btn",function () {
+    var experiencecontent = '<tr class="add-row">' +
+        '<td>' +
+            '<input type="text" class="form-control">' +
+        '</td>' +
+        '<td>' +
+            '<input type="text" class="form-control">' +
+        '</td>' +
+        '<td>' +
+            '<input type="text" class="form-control">' +
+        '</td>' +
+        '<td>' +
+            '<input type="text" class="form-control">' +
+        '</td>' +
+        '<td>' +
+            '<input type="text" class="form-control">' +
+        '</td>' +
+        '<td>' +
+            '<input type="text" class="form-control">' +
+        '</td>' +
+        '<td class="add-remove text-end">' +
+            '<a href="javascript:void(0);" class="add-btn me-2"><i class="fas fa-plus-circle"></i></a> ' +
+            '<a href="#" class="copy-btn me-2"><i class="fe fe-copy"></i></a>' +
+            '<a href="javascript:void(0);" class="remove-btn"><i class="fe fe-trash-2"></i></a>' +
+        '</td>' +
+    '</tr>';
+    
+    $(".add-table-items").append(experiencecontent);
+    return false;
+});
