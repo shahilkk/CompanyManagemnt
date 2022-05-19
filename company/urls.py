@@ -18,6 +18,8 @@ urlpatterns = [
 
     path('invoice',views.invoice,name='invoice'),
     path('addinvoice',views.addinvoice,name='addinvoice'),
+    
+
     path('expences',views.expences,name='expences'),
     path('addexpences',views.addexpences,name='addexpences'),
 
@@ -30,5 +32,7 @@ urlpatterns = [
     path('stocktransfer',views.stocktransfer,name='stocktransfer'),
     path('stafftransfer',views.stafftransfer,name='stafftransfer'),
    
+    path('stock',views.stock,name='stock'),
+    path('branchstock',views.branchstock,name='branchstock'),
     
 ]
