@@ -1,0 +1,134 @@
+{% extends 'branch/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="content container-fluid">
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">
+                        Products
+                    </h3>
+                    <ul class="breadcrumb">
+                        <li class="">
+                            <a href="{% url 'branch:index' %}">Dashboard /</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                           Purchase List
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto">
+                    <a href="{% url 'branch:addproduct' %}" class="btn btn-primary me-1">
+                        <i class="fas fa-plus"></i>
+                    </a>
+                    <a class="btn btn-primary filter-btn" href="javascript:void(0);" id="filter_search">
+                        <i class="fas fa-filter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div  class="card filter-card">
+            <div class="card-body pb-0">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>
+                                Product Name:
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>
+                                Product ID
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>
+                                Price
+                            </label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card card-table">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-stripped table-hover datatable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>
+                                            Sl.No
+                                        </th>
+                                        <th>
+                                            Product ID
+                                        </th>
+                                        <th>
+                                            Product Name
+                                        </th>
+                                        <th>
+                                            Quantity
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                             
+                                    <tr>
+                                        <td>
+
+                                        </td>
+                                        <td>
+                                            PRo98765
+                                        </td>
+                                        <td>
+                                            shirt
+                                        </td>
+                                        <td>76</td>
+                                    </tr>
+                                  
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body
+		{
+		    counter-reset: Serial;          
+		}
+
+		table
+		{
+		    border-collapse: separate;
+		}
+
+		tr td:first-child:before
+		{
+		  counter-increment: Serial;      
+		  content: counter(Serial); 
+		}
+</style>  
+
+
+
+
+{% endblock %}
