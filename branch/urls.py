@@ -47,7 +47,13 @@ urlpatterns = [
     path('staffrequest', views.staffrequest, name='staffrequest'),
     path('stockrequest', views.stockrequest, name='stockrequest'),
 
-   
+
+
+    path('product', views.product, name='product'),
+    path('addproduct', views.addproduct, name='addproduct'),
+    path('editproduct', views.editproduct, name='editproduct'),
+
+    path('purchaselist', views.purchaselist, name='purchaselist'),
     
 
 

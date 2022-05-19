@@ -6,78 +6,163 @@ def master(request):
 
 
 def index(request):
-    return render(request,'branch/index.html')    
+    context={
+        "is_index":True
+    }
+    return render(request,'branch/index.html',context)    
 
 
 
 def customer(request):
-    return render(request,'branch/customer/customer.html')
-
+    context={
+        "is_customer":True
+    }
+    return render(request,'branch/customer/customer.html',context)
 
 def addcustomer(request):
-    return render(request,'branch/customer/addcustomer.html')
+    context={
+        "is_customer":True
+    }
+    return render(request,'branch/customer/addcustomer.html',context)
 
 def editcustomer(request):
-    return render(request,'branch/customer/editcustomer.html')    
+    context={
+        "is_customer":True
+    }
+    return render(request,'branch/customer/editcustomer.html',context)    
 
 
 
 
 def employee(request):
-    return render(request,'branch/employees/employee.html')
+    context={
+        "is_employee":True
+    }
+    return render(request,'branch/employees/employee.html',context)
 
 
 def addemployee(request):
-    return render(request,'branch/employees/addemploye.html')
+    context={
+        "is_employee":True
+    }
+    return render(request,'branch/employees/addemploye.html',context)
 
 def editemployee(request):
-    return render(request,'branch/employees/editemploye.html')
+    context={
+        "is_employee":True
+    }
+    return render(request,'branch/employees/editemploye.html',context)
 
 
 def profitandloss(request):
-    return render(request,'branch/profitandloss.html')
+    context={
+        "is_profitandloss":True
+    }
+    return render(request,'branch/profitandloss.html',context)
 
 
 def payment(request):
-    return render(request,'branch/payment.html')
+    context={
+        "is_payment":True
+    }
+    return render(request,'branch/payment.html',context)
 
 def expense(request):
-    return render(request,'branch/expenses/expense.html')    
+    context={
+        "is_expenses":True
+    }
+    return render(request,'branch/expenses/expense.html',context)    
 
 def addexpense(request):
-    return render(request,'branch/expenses/addexpenses.html')     
+    context={
+        "is_expenses":True
+    }
+    return render(request,'branch/expenses/addexpenses.html',context)     
 
 
 
 def income(request):
-    return render(request,'branch/income.html')
+    context={
+        "is_income":True
+    }
+    return render(request,'branch/income.html',context)
 
 
 
 def preview(request):
-    return render(request,'branch/preview.html')
+    context={
+        "is_preview":True
+    }
+    return render(request,'branch/preview.html',context)
 
 
 def search(request):
-    return render(request,'branch/stocksearch.html')
+    context={
+        "is_search":True
+    }
+    return render(request,'branch/stocksearch.html',context)
 
 
 def estimate(request):
-    return render(request,'branch/billing/estimate.html')
+    context={
+        "is_estimate":True
+    }
+    return render(request,'branch/billing/estimate.html',context)
 
 
 def invoice(request):
-    return render(request,'branch/billing/invoice.html')
+    context={
+        "is_invoice":True
+    }
+    return render(request,'branch/billing/invoice.html',context)
 
 
 def bill(request):
-    return render(request,'branch/billing/bill.html')
+    context={
+        "is_bill":True
+    }
+    return render(request,'branch/billing/bill.html',context)
 
 
 def stockrequest(request):
-    return render(request,'branch/request/stockrequest.html')
+    context={
+        "is_bill":True
+    }
+    return render(request,'branch/request/stockrequest.html',context)
 
 
 def staffrequest(request):
-    return render(request,'branch/request/staffrequest.html')
+    context={
+        "is_bill":True
+    }
+    return render(request,'branch/request/staffrequest.html',context)
+
+
+def product(request):
+    context={
+        "is_product":True
+    }
+    return render(request,'branch/product/product.html',context)
+
+
+def addproduct(request):
+    context={
+        "is_product":True
+    }
+    return render(request,'branch/product/addproduct.html',context)
+
+
+def editproduct(request):
+    context={
+        "is_product":True
+    }
+    return render(request,'branch/product/editproduct.html',context)
+
+
+def purchaselist(request):
+    context={
+        "is_purchaselist":True
+    }
+    return render(request,'branch/purchaselist.html',context)
+
     
