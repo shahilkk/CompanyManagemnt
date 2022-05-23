@@ -39,7 +39,9 @@ def invoice(request):
     return render(request,'company/invoice/invoice.html')
 
 def addinvoice(request):
-    return render(request,'company/invoice/addinvoice.html')   
+    return render(request,'company/invoice/addinvoice.html') 
+
+  
 
 
 
@@ -66,3 +68,11 @@ def stafftransfer(request):
     
 def stocktransfer(request):
     return render(request,'company/transfer/stocktransfer.html') 
+
+
+
+def stock(request):
+    return render(request,'company/stock/stock.html')
+
+def branchstock(request):
+    return render(request,'company/stock/branchstock.html')
