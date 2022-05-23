@@ -1,0 +1,578 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multy company </title>
+
+    <link rel="shortcut icon" href="{% static 'websites/logo.webp' %}">
+
+    <link rel="stylesheet" href="{% static 'company/css/bootstrap.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'company/plugins/fontawesome/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'company/plugins/fontawesome/css/all.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'company/css/style.css' %}">
+
+    <!-- <link rel="stylesheet" href=" {% static 'company/plugins/datatables/datatables.min.css' %}"> -->
+    <link rel="stylesheet" href=" {% static 'branch/plugins/data/data.css' %}">
+
+</head>
+
+<body class="nk-body bg-lighter npc-default has-sidebar no-touch nk-nio-theme">
+
+    <!-- Header================================================== -->
+    <div class="main-wrapper">
+        <div class="header header-one">
+
+            <div class="header-left header-left-one">
+                {% comment %} <a href="index.html" class="logo">
+                    <img src="assets/img/logo.png" alt="Logo">
+                </a> {% endcomment %}
+                <!-- <a href="index.html" class="white-logo">
+                    <img src="assets/img/logo-white.png" alt="Logo">
+                </a> -->
+                <!-- <a href="index.html" class="logo logo-small">
+                    <img src="assets/img/logo-small.png" alt="Logo" width="30" height="30">
+                </a> -->
+            </div>
+        
+        
+            <a href="javascript:void(0);" id="toggle_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        
+        
+            <!-- <div class="top-nav-search">
+                <form>
+                    <input type="text" class="form-control" placeholder="Search here">
+                    <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div> -->
+        
+        
+            <a class="mobile_btn" id="mobile_btn">
+                <i class="fas fa-bars"></i>
+            </a>
+        
+        
+            <ul class="nav nav-tabs user-menu">
+        
+                <!-- <li class="nav-item dropdown has-arrow flag-nav">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button">
+                        <img src="assets/img/flags/us.png" alt="" height="20"> <span>English</span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/flags/us.png" alt="" height="16"> English
+                        </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/flags/fr.png" alt="" height="16"> French
+                        </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/flags/es.png" alt="" height="16"> Spanish
+                        </a>
+                        <a href="javascript:void(0);" class="dropdown-item">
+                            <img src="assets/img/flags/de.png" alt="" height="16"> German
+                        </a>
+                    </div>
+                </li> -->
+        
+        
+                <!-- <li class="nav-item dropdown">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                        <i data-feather="bell"></i> <span class="badge rounded-pill">5</span>
+                    </a>
+                    <div class="dropdown-menu notifications">
+                        <div class="topnav-dropdown-header">
+                            <span class="notification-title">Notifications</span>
+                            <a href="javascript:void(0)" class="clear-noti"> Clear All</a>
+                        </div>
+                        <div class="noti-content">
+                            <ul class="notification-list">
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm">
+                                                <img class="avatar-img rounded-circle" alt=""
+                                                    src="assets/img/profiles/avatar-02.jpg">
+                                            </span>
+                                            <div class="media-body">
+                                                <p class="noti-details"><span class="noti-title">Brian Johnson</span>
+                                                    paid the invoice <span class="noti-title">#DF65485</span></p>
+                                                <p class="noti-time"><span class="notification-time">4 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm">
+                                                <img class="avatar-img rounded-circle" alt=""
+                                                    src="assets/img/profiles/avatar-03.jpg">
+                                            </span>
+                                            <div class="media-body">
+                                                <p class="noti-details"><span class="noti-title">Marie Canales</span>
+                                                    has accepted your estimate <span
+                                                        class="noti-title">#GTR458789</span></p>
+                                                <p class="noti-time"><span class="notification-time">6 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <div class="avatar avatar-sm">
+                                                <span class="avatar-title rounded-circle bg-primary-light"><i
+                                                        class="far fa-user"></i></span>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="noti-details"><span class="noti-title">New user
+                                                        registered</span></p>
+                                                <p class="noti-time"><span class="notification-time">8 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <span class="avatar avatar-sm">
+                                                <img class="avatar-img rounded-circle" alt=""
+                                                    src="assets/img/profiles/avatar-04.jpg">
+                                            </span>
+                                            <div class="media-body">
+                                                <p class="noti-details"><span class="noti-title">Barbara Moore</span>
+                                                    declined the invoice <span class="noti-title">#RDW026896</span></p>
+                                                <p class="noti-time"><span class="notification-time">12 mins ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="notification-message">
+                                    <a href="activities.html">
+                                        <div class="media d-flex">
+                                            <div class="avatar avatar-sm">
+                                                <span class="avatar-title rounded-circle bg-info-light"><i
+                                                        class="far fa-comment"></i></span>
+                                            </div>
+                                            <div class="media-body">
+                                                <p class="noti-details"><span class="noti-title">You have received a new
+                                                        message</span></p>
+                                                <p class="noti-time"><span class="notification-time">2 days ago</span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="topnav-dropdown-footer">
+                            <a href="activities.html">View all Notifications</a>
+                        </div>
+                    </div>
+                </li> -->
+                
+        
+        
+                <li class="nav-item dropdown has-arrow main-drop">
+                    <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
+                        <span class="user-img">
+                            <img src="assets/img/profiles/avatar-01.jpg" alt="">
+                            <span class="status online"></span>
+                        </span> <i class="fa fa-user-circle"></i>
+                        <span>Admin</span>
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="profile.html"><i data-feather="user" class="me-1"></i>
+                            Profile</a>
+                        <a class="dropdown-item" href="settings.html"><i data-feather="settings" class="me-1"></i>
+                            Settings</a>
+                        <a class="dropdown-item" href="login.html"><i data-feather="log-out" class="me-1"></i>
+                            Logout</a>
+                    </div>
+                </li>
+        
+            </ul>
+        
+        </div>
+        
+
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-inner slimscroll">
+                <div id="sidebar-menu" class="sidebar-menu">
+                    <ul>
+                        {% comment %} <li class="menu-title"><span>Main</span></li> {% endcomment %}
+                        <li class="active">
+                            <a href="{% url 'company:index' %}"><i data-feather="home"></i> <span>Dashboard</span></a>
+                        </li>
+                        
+                        <li>
+                            <a href="{% url 'company:branch' %}"><i  class="fa fa-building"></i> <span>Branches</span></a>
+                        </li>
+                        {% comment %} <li>
+                            <a href="estimates.html"><i data-feather="file-text"></i> <span></span></a>
+                        </li> {% endcomment %}
+                        <li >
+                            <a href="{% url 'company:staff' %}"><i class="fa fa-users"></i> <span> Staff</span> </a>
+                           
+                        </li>
+                        <li >
+                            <a href="{% url 'company:invoice' %}"><i class="fa fa-th-list"></i> <span>  Invoices</span> </a>
+                           
+                        </li>
+                         <!-- <li class="submenu">
+                            <a href=""><i class="fa fa-clipboard"></i> <span> Invoices</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{% url 'company:invoice' %}">Invoices List</a></li>
+                               
+                                <li><a href="add-invoice.html">Add Invoices</a></li>
+                                <li><a href="edit-invoice.html">Edit Invoices</a></li>
+                                <li><a href="view-invoice.html">Invoices Details</a></li>
+                                <li><a href="invoices-settings.html">Invoices Settings</a></li>
+                            </ul>
+                        </li>  -->
+                        <li>
+                            <a href="{% url 'company:bank' %}"><i class="fa fa-suitcase" ></i> <span>Bank</span></a>
+                        </li>
+                        <li>
+                            <a href="{% url 'company:income' %}"><i class="fas fa-clone"></i> <span>income</span></a>
+                        </li>
+                       
+                        <li>
+                            <a href="{% url 'company:expences' %}"><i class="fas fa-chart-area"></i> <span>Expenses</span></a>
+                        </li>
+                       
+                       
+                        <li class="submenu">
+                            <a href="#"><i class="fas fa-share-alt"></i> <span> Tranfer</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{% url 'company:stafftransfer' %}">staff transfer</a></li>
+                                <li><a href="{% url 'company:stocktransfer' %}">stock transfer</a></li>
+                                
+                            </ul> 
+                        </li>
+                        <li>
+                            <a href="{% url 'company:stock' %}"><i class="fas fa-chart-area"></i> <span>Stock</span></a>
+                        </li>
+                        {% comment %} <li class="submenu">
+                            <a href="#"><i data-feather="grid"></i> <span> Requestes</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="{% url 'company:staffrequestes' %}">staff Requestes</a></li>
+                                <li><a href="{% url 'company:stockrequestes' %}">stock Requestes</a></li>
+                                
+                            </ul>
+                        </li> {% endcomment %}
+                                                         
+                        {% comment %} <li>
+                            <a href="settings.html"><i data-feather="settings"></i> <span>Settings</span></a>
+                        </li> {% endcomment %}
+                        <!-- <li class="submenu">
+                            <a href="#"><i data-feather="grid"></i> <span> Application</span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="chat.html">Chat</a></li>
+                                <li><a href="calendar.html">Calendar</a></li>
+                                <li><a href="inbox.html">Email</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">
+                            <span>Pages</span>
+                        </li>
+                        <li>
+                            <a href="profile.html"><i data-feather="user-plus"></i> <span>Profile</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="lock"></i> <span> Authentication </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="login.html"> Login </a></li>
+                                <li><a href="register.html"> Register </a></li>
+                                <li><a href="forgot-password.html"> Forgot Password </a></li>
+                                <li><a href="lock-screen.html"> Lock Screen </a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="alert-octagon"></i> <span> Error Pages </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="error-404.html">404 Error </a></li>
+                                <li><a href="error-500.html">500 Error </a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="users.html"><i data-feather="user"></i> <span>Users</span></a>
+                        </li>
+                        <li>
+                            <a href="blank-page.html"><i data-feather="file"></i> <span>Blank Page</span></a>
+                        </li>
+                        <li>
+                            <a href="maps-vector.html"><i data-feather="map-pin"></i> <span>Vector Maps</span></a>
+                        </li>
+                        <li class="menu-title">
+                            <span>UI Interface</span>
+                        </li>
+                        <li>
+                            <a href="components.html"><i data-feather="layers"></i> <span>Components</span></a>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="box"></i> <span>Elements </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="sweetalerts.html">Sweet Alerts</a></li>
+                                <li><a href="tooltip.html">Tooltip</a></li>
+                                <li><a href="popover.html">Popover</a></li>
+                                <li><a href="ribbon.html">Ribbon</a></li>
+                                <li><a href="clipboard.html">Clipboard</a></li>
+                                <li><a href="drag-drop.html">Drag & Drop</a></li>
+                                <li><a href="rangeslider.html">Range Slider</a></li>
+                                <li><a href="rating.html">Rating</a></li>
+                                <li><a href="toastr.html">Toastr</a></li>
+                                <li><a href="text-editor.html">Text Editor</a></li>
+                                <li><a href="counter.html">Counter</a></li>
+                                <li><a href="scrollbar.html">Scrollbar</a></li>
+                                <li><a href="spinner.html">Spinner</a></li>
+                                <li><a href="notification.html">Notification</a></li>
+                                <li><a href="lightbox.html">Lightbox</a></li>
+                                <li><a href="stickynote.html">Sticky Note</a></li>
+                                <li><a href="timeline.html">Timeline</a></li>
+                                <li><a href="horizontal-timeline.html">Horizontal Timeline</a></li>
+                                <li><a href="form-wizard.html">Form Wizard</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="bar-chart-2"></i> <span> Charts </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="chart-apex.html">Apex Charts</a></li>
+                                <li><a href="chart-js.html">Chart Js</a></li>
+                                <li><a href="chart-morris.html">Morris Charts</a></li>
+                                <li><a href="chart-flot.html">Flot Charts</a></li>
+                                <li><a href="chart-peity.html">Peity Charts</a></li>
+                                <li><a href="chart-c3.html">C3 Charts</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="award"></i> <span> Icons </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="icon-fontawesome.html">Fontawesome Icons</a></li>
+                                <li><a href="icon-feather.html">Feather Icons</a></li>
+                                <li><a href="icon-ionic.html">Ionic Icons</a></li>
+                                <li><a href="icon-material.html">Material Icons</a></li>
+                                <li><a href="icon-pe7.html">Pe7 Icons</a></li>
+                                <li><a href="icon-simpleline.html">Simpleline Icons</a></li>
+                                <li><a href="icon-themify.html">Themify Icons</a></li>
+                                <li><a href="icon-weather.html">Weather Icons</a></li>
+                                <li><a href="icon-typicon.html">Typicon Icons</a></li>
+                                <li><a href="icon-flag.html">Flag Icons</a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="columns"></i> <span> Forms </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="form-basic-inputs.html">Basic Inputs </a></li>
+                                <li><a href="form-input-groups.html">Input Groups </a></li>
+                                <li><a href="form-horizontal.html">Horizontal Form </a></li>
+                                <li><a href="form-vertical.html"> Vertical Form </a></li>
+                                <li><a href="form-mask.html">Form Mask </a></li>
+                                <li><a href="form-validation.html">Form Validation </a></li>
+                                <li><a href="form-select2.html">Form Select2 </a></li>
+                                <li><a href="form-fileupload.html">File Upload </a></li>
+                            </ul>
+                        </li>
+                        <li class="submenu">
+                            <a href="#"><i data-feather="layout"></i> <span> Tables </span> <span
+                                    class="menu-arrow"></span></a>
+                            <ul>
+                                <li><a href="tables-basic.html">Basic Tables </a></li>
+                                <li><a href="data-tables.html">Data Table </a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        {% block content %}
+
+
+        {% endblock %}
+
+    </div>
+
+
+<!-- Common JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="{% static 'branch/js/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'branch/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'branch/js/feather.min.js' %}"></script>
+<script src="{% static 'branch/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+<script src="{% static 'branch/plugins/apexchart/apexcharts.min.js' %}"></script>
+<script src="{% static 'branch/plugins/apexchart/chart-data.js' %}"></script>
+{% comment %} <script src="{% static 'branch/js/script.js' %}"></script> {% endcomment %}
+
+<!-- calender JS -->
+<script src="{% static 'branch/plugins/moment/moment.min.js' %}"></script>
+<script src="{% static 'branch/js/bootstrap-datetimepicker.min.js' %}"></script>
+
+<script src="{% static 'branch/js/jquery-ui.min.js' %} "></script>
+<script src="{% static 'branch/plugins/fullcalendar/fullcalendar.min.js' %}"></script>
+<script src="{% static 'branch/plugins/fullcalendar/jquery.fullcalendar.js' %}"></script>
+
+<script src="{% static 'branch/plugins/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'branch/plugins/datatables/datatables.min.js' %} "></script>
+
+
+<script>
+
+    // datatable
+    if ($('.datatable').length > 0) {
+        $('.datatable').DataTable({
+            language: {
+                search: '<i class="fas fa-search"></i>',
+                searchPlaceholder: "Search"
+            }
+        });
+    }
+    // end datatable
+
+
+    if ($('.datetimepicker').length > 0) {
+        $('.datetimepicker').datetimepicker({
+            format: 'DD-MM-YYYY',
+            icons: {
+                up: "fas fa-angle-up",
+                down: "fas fa-angle-down",
+                next: 'fas fa-angle-right',
+                previous: 'fas fa-angle-left'
+            }
+        });
+    }
+
+    //    toggle
+    $(document).on('click', '#toggle_btn', function () {
+        if ($('body').hasClass('mini-sidebar')) {
+            $('body').removeClass('mini-sidebar');
+            $('.subdrop + ul').slideDown();
+        } else {
+            $('body').addClass('mini-sidebar');
+            $('.subdrop + ul').slideUp();
+        }
+        setTimeout(function () {
+            mA.redraw();
+            mL.redraw();
+        }, 300);
+        return false;
+    });
+
+
+    // filters
+    $(document).on('click', '#filter_search', function () {
+        $('#filter_inputs').show();
+    });
+
+    // selectbox
+    $('.app-listing .selectBox').on("click", function () {
+        $(this).parent().find('#checkBoxes').fadeToggle();
+        $(this).parent().parent().siblings().find('#checkBoxes').fadeOut();
+    });
+
+    $('.invoices-main-form .selectBox').on("click", function () {
+        $(this).parent().find('#checkBoxes-one').fadeToggle();
+        $(this).parent().parent().siblings().find('#checkBoxes-one').fadeOut();
+    });
+    
+
+    // Variables declarations
+
+    var $wrapper = $('.main-wrapper');
+    var $pageWrapper = $('.page-wrapper');
+    var $slimScrolls = $('.slimscroll');
+
+    // Sidebar
+    var Sidemenu = function () {
+        this.$menuItem = $('#sidebar-menu a');
+    };
+
+    function init() {
+        var $this = Sidemenu;
+        $('#sidebar-menu a').on('click', function (e) {
+            if ($(this).parent().hasClass('submenu')) {
+                e.preventDefault();
+            }
+            if (!$(this).hasClass('subdrop')) {
+                $('ul', $(this).parents('ul:first')).slideUp(350);
+                $('a', $(this).parents('ul:first')).removeClass('subdrop');
+                $(this).next('ul').slideDown(350);
+                $(this).addClass('subdrop');
+            } else if ($(this).hasClass('subdrop')) {
+                $(this).removeClass('subdrop');
+                $(this).next('ul').slideUp(350);
+            }
+        });
+        $('#sidebar-menu ul li.submenu a.active').parents('li:last').children('a:first').addClass('active').trigger('click');
+    }
+
+    // Sidebar Initiate
+    init();
+
+    // Mobile menu sidebar overlay
+    $('body').append('<div class="sidebar-overlay"></div>');
+    $(document).on('click', '#mobile_btn', function () {
+        $wrapper.toggleClass('slide-nav');
+        $('.sidebar-overlay').toggleClass('opened');
+        $('html').toggleClass('menu-opened');
+        return false;
+    });
+
+    // Sidebar overlay
+    $(".sidebar-overlay").on("click", function () {
+        $wrapper.removeClass('slide-nav');
+        $(".sidebar-overlay").removeClass("opened");
+        $('html').removeClass('menu-opened');
+    });
+
+    // Page Content Height
+    if ($('.page-wrapper').length > 0) {
+        var height = $(window).height();
+        $(".page-wrapper").css("min-height", height);
+    }
+
+    // Page Content Height Resize
+    $(window).resize(function () {
+        if ($('.page-wrapper').length > 0) {
+            var height = $(window).height();
+            $(".page-wrapper").css("min-height", height);
+        }
+    });
+
+    // Select 2
+    if ($('.select').length > 0) {
+        $('.select').select2({
+            minimumResultsForSearch: -1,
+            width: '100%'
+        });
+    }
+
+
+</script>
+
+</body>
+
+</html>
