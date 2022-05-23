@@ -4,6 +4,8 @@ from . import views
 app_name = 'branch'
 
 urlpatterns = [
+    # path('master', views.master, name='master'),
+
     path('master', views.master, name='master'),
 
     path('index', views.index, name='index'),
@@ -56,7 +58,7 @@ urlpatterns = [
     path('purchaselist', views.purchaselist, name='purchaselist'),
 
 
-    path('master', views.master, name='master'),
+    
     
 
 

@@ -1,8 +1,11 @@
 from django.shortcuts import render
 
 # Create your views here.
+# def master(request):
+#     return render(request,'branch/partials/base.html')
+
 def master(request):
-    return render(request,'branch/partials/base.html')
+    return render(request,'branch/master.html')
 
 
 def index(request):
@@ -167,6 +170,5 @@ def purchaselist(request):
 
 
 
-def master(request):
-    return render(request,'branch/master.html')
+
     
