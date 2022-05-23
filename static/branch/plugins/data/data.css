@@ -40,31 +40,14 @@ div.dataTables_wrapper div.dataTables_length label {
     text-align: left;
     white-space: nowrap
 }
-div.dataTables_length{
-    width: 50%;
-    float: left;
-}
 
-@media (max-width:336px) {
-    div.dataTables_length{
-        width: 100%;
-        float: left;
-    }
-    div.dataTables_wrapper div.dataTables_filter {
-        text-align: right;
-        width: 100%;
-        float: left;
-    }
-}
 div.dataTables_wrapper div.dataTables_length select {
     width: auto;
     display: inline-block
 }
 
 div.dataTables_wrapper div.dataTables_filter {
-    text-align: right;
-    width: 50%;
-    float: left;
+    text-align: right
 }
 
 div.dataTables_wrapper div.dataTables_filter label {
@@ -104,7 +87,7 @@ div.dataTables_wrapper div.dataTables_processing {
     margin-left: -100px;
     margin-top: -26px;
     text-align: center;
-    padding: 1em 0;
+    padding: 1em 0
 }
 
 table.dataTable thead>tr>th.sorting_asc,
@@ -265,16 +248,4 @@ div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:first-chi
 
 div.table-responsive>div.dataTables_wrapper>div.row>div[class^="col-"]:last-child {
     padding-right: 0
-}
-.paginate_button {
-    border: 1px solid gray;
-    padding: 5px 10px ;
-    margin-top: 0px;
-}
-.current{
-    background-color: #377dff;
-    color: white;
-}
-.previous,.next{
-    color: #000;
 }

@@ -54,6 +54,9 @@ urlpatterns = [
     path('editproduct', views.editproduct, name='editproduct'),
 
     path('purchaselist', views.purchaselist, name='purchaselist'),
+
+
+    path('master', views.master, name='master'),
     
 
 

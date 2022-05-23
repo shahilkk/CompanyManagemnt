@@ -165,4 +165,8 @@ def purchaselist(request):
     }
     return render(request,'branch/purchaselist.html',context)
 
+
+
+def master(request):
+    return render(request,'branch/master.html')
     
