@@ -41,31 +41,31 @@
                     <img src="{% static 'branch/img/logo-small.png' %}" alt="Logo" width="30" height="30">
                 </a>
             </div>
-        
-        
+
+
             <a href="javascript:void(0);" id="toggle_btn">
                 <i class="fas fa-bars"></i>
             </a>
-        
-        
+
+
             <div class="top-nav-search">
                 <form>
                     <input type="text" class="form-control" placeholder="Search here">
                     <button class="btn" type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
-        
-        
+
+
             <a class="mobile_btn" id="mobile_btn">
                 <i class="fas fa-bars"></i>
             </a>
-        
-        
+
+
             <ul class="nav nav-tabs user-menu">
-        
+
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
-                       <span>Requests</span>
+                        <span>Requests</span>
                     </a>
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="{% url 'branch:stockrequest' %}">
@@ -74,12 +74,12 @@
                         <a class="dropdown-item" href="{% url 'branch:staffrequest' %}">
                             <i class="fa fa-user-times"></i>&nbsp; Staff request
                         </a>
-                        
+
                     </div>
                 </li>
-        
-        
-        
+
+
+
                 <li class="nav-item dropdown has-arrow main-drop">
                     <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
                         <span class="user-img">
@@ -97,11 +97,11 @@
                             Logout</a>
                     </div>
                 </li>
-        
+
             </ul>
-        
+
         </div>
-        
+
 
 
         <div class="sidebar" id="sidebar">
@@ -117,7 +117,7 @@
                             <a href="{% url 'branch:customer' %}"><i class="fa fa-users" data-bs-toggle="tooltip"></i>
                                 <span>Customers</span></a>
                         </li>
-                      
+
                         <li {% if is_employee %} class="active" {% endif %}>
                             <a href="{% url 'branch:employee' %}"><i class="fa fa-user" data-bs-toggle="tooltip"
                                     title="fa fa-user"></i> <span>Employees</span></a>
@@ -136,14 +136,16 @@
                             <a href="{% url 'branch:invoice' %}"><i class="fa fa-clipboard" data-bs-toggle="tooltip"
                                     title="fa fa-clipboard"></i><span>Invoices </span></a>
                         </li>
-        
-                      
-        
+
+
+
                         <li {% if is_payment %} class="active" {% endif %}>
-                            <a href="{% url 'branch:payment' %}"><i class="fa fa-credit-card"></i> <span>Payments</span></a>
+                            <a href="{% url 'branch:payment' %}"><i class="fa fa-credit-card"></i>
+                                <span>Payments</span></a>
                         </li>
                         <li {% if is_expenses %} class="active" {% endif %}>
-                            <a href="{% url 'branch:expense' %}"><i class="fas fa-chart-area"></i> <span>Expenses</span></a>
+                            <a href="{% url 'branch:expense' %}"><i class="fas fa-chart-area"></i>
+                                <span>Expenses</span></a>
                         </li>
                         <li {% if is_income %} class="active" class="active" {% endif %}>
                             <a href="{% url 'branch:income' %}">
@@ -151,14 +153,16 @@
                                 <span>Income</span>
                             </a>
                         </li>
-                       
+
                         <li {% if is_profitandloss %} class="active" {% endif %}>
-                            <a href=" {% url 'branch:profitandloss' %}"><i class="fas fa-sitemap"></i> <span> Profit And Loss
+                            <a href=" {% url 'branch:profitandloss' %}"><i class="fas fa-sitemap"></i> <span> Profit And
+                                    Loss
                                 </span></a>
                         </li>
-                      
+
                         <li {% if is_preview %} class="active" {% endif %}>
-                            <a href="{% url 'branch:preview' %}"><i class="fa fa-eye"></i> <span> Preview List </span></a>
+                            <a href="{% url 'branch:preview' %}"><i class="fa fa-eye"></i> <span> Preview List
+                                </span></a>
                         </li>
                         <li {% if is_search %} class="active" {% endif %}>
                             <a href="{% url 'branch:search' %}">
@@ -172,15 +176,15 @@
                                 <span>Purchase list</span>
                             </a>
                         </li>
-                        
+
                         <!-- <li {% if is_medicinerequested %} class="active" {% endif %}>
                             <a href="">
                                 <i class="fa fa-upload"></i>
                                 <span>Requested History</span>
                             </a>
                         </li> -->
-        
-        
+
+
                     </ul>
                 </div>
             </div>
@@ -195,31 +199,31 @@
     </div>
 
 
-<!-- Common JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="{% static 'branch/js/jquery-3.6.0.min.js' %}"></script>
-<script src="{% static 'branch/js/bootstrap.bundle.min.js' %}"></script>
-<script src="{% static 'branch/js/feather.min.js' %}"></script>
-<script src="{% static 'branch/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
-<script src="{% static 'branch/plugins/apexchart/apexcharts.min.js' %}"></script>
-<script src="{% static 'branch/plugins/apexchart/chart-data.js' %}"></script>
-{% comment %} <script src="{% static 'branch/js/script.js' %}"></script> {% endcomment %}
+    <!-- Common JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{% static 'branch/js/jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'branch/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'branch/js/feather.min.js' %}"></script>
+    <script src="{% static 'branch/plugins/slimscroll/jquery.slimscroll.min.js' %}"></script>
+    <script src="{% static 'branch/plugins/apexchart/apexcharts.min.js' %}"></script>
+    <script src="{% static 'branch/plugins/apexchart/chart-data.js' %}"></script>
+    {% comment %}
+    <script src="{% static 'branch/js/script.js' %}"></script> {% endcomment %}
 
-<!-- calender JS -->
-<script src="{% static 'branch/plugins/moment/moment.min.js' %}"></script>
-<script src="{% static 'branch/js/bootstrap-datetimepicker.min.js' %}"></script>
+    <!-- calender JS -->
+    <script src="{% static 'branch/plugins/moment/moment.min.js' %}"></script>
+    <script src="{% static 'branch/js/bootstrap-datetimepicker.min.js' %}"></script>
 
-<script src="{% static 'branch/plugins/select2/js/select2.min.js' %}"></script>
-<!-- <script src="{% static 'branch/plugins/select2/js/select2.min.js' %}"></script> -->
-
-
-<script src="{% static 'branch/plugins/datatables/jquery.dataTables.min.js' %}"></script>
-<script src="{% static 'branch/plugins/datatables/datatables.min.js' %} "></script>
+    <script src="{% static 'branch/plugins/select2/js/select2.min.js' %}"></script>
+    <!-- <script src="{% static 'branch/plugins/select2/js/select2.min.js' %}"></script> -->
 
 
-<script>
+    <script src="{% static 'branch/plugins/datatables/jquery.dataTables.min.js' %}"></script>
+    <script src="{% static 'branch/plugins/datatables/datatables.min.js' %} "></script>
 
-if ($('.counter').length > 0) {
+
+    <script>
+        if ($('.counter').length > 0) {
             $('.counter').counterUp({
                 delay: 20,
                 time: 2000
@@ -426,7 +430,7 @@ if ($('.counter').length > 0) {
 
 
 
-</script>
+    </script>
 
 </body>
 
